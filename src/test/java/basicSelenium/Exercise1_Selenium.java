@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.time.Duration;
 import java.util.Date;
 
 public class Exercise1_Selenium {
@@ -52,18 +53,25 @@ public class Exercise1_Selenium {
         nameProject="Update"+new Date().getTime();
 
         // create task
-        String nameUpdated = "Nelson's task";
+        String nameUpdated = "tarea1";
         driver.findElement(By.id("NewItemContentInput")).click();
         driver.findElement(By.id("NewItemContentInput")).sendKeys(nameUpdated);
         driver.findElement(By.id("NewItemAddButton")).click();
 
+        Thread.sleep(1000);
+
         // Update task
-        driver.findElement(By.xpath("//ul[@id='mainItemList']/li/div/table/tbody/tr/td/div[@class='ItemIndicator']/img[contains(@style,'inline')]")).click();
-        //driver.findElement(By.xpath("//td/div[text()='"+nameUpdated+"']")).clear();
+        //driver.findElement(By.xpath("//td/div[text()='tarea1']")).click(); // it works
+
+        //driver.findElement(By.xpath("//td/div/img[contains(@style,'inline')]")).click();
+
+        //driver.findElement(By.xpath("//td/div[@class='UnderEditingItem'}")).clear();
+        //driver.findElement(By.xpath("//td/div[text()='tarea1']")).sendKeys("tarea editada",Keys.ENTER);
         //driver.findElement(By.id("ItemId_11079457")).sendKeys("Nelson's task updated", Keys.ENTER);
 
 
-        Thread.sleep(1000);
+        Thread.sleep(5000);
 
     }
 }
+//aria/Options[role="img"]
