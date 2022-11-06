@@ -58,7 +58,6 @@ public class Exercise1_Selenium {
         driver.findElement(By.id("NewItemContentInput")).sendKeys(nameUpdated);
         driver.findElement(By.id("NewItemAddButton")).click();
 
-        Thread.sleep(1000);
 
         // Update task
         //driver.findElement(By.xpath("//td/div[text()='tarea1']")).click(); // it works
@@ -69,8 +68,6 @@ public class Exercise1_Selenium {
         //driver.findElement(By.xpath("//td/div[text()='tarea1']")).sendKeys("tarea editada",Keys.ENTER);
         //driver.findElement(By.id("ItemId_11079457")).sendKeys("Nelson's task updated", Keys.ENTER);
 
-
-        Thread.sleep(5000);
 
     }
 }
